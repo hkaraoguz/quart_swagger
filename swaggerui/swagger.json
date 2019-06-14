@@ -1,0 +1,42 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Quart Swagger Example",
+    "version": "0.1"
+  },
+  "paths": {
+    "/hello_world": {
+      "post": {
+        "summary": "Hello Word",
+        "description": "Return a hello world string along with the name",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "string",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "Hello World Jon"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
